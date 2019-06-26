@@ -26,7 +26,7 @@ In short streaming pipeline looks like this:
 1. Worker pushes compressed gradient to parameter server.
 1. Parameter server decompresses the gradient and updates the model.
 
-The whole process continues infinitely regardless of the input file size, so after every window is processed
+The whole process continues infinitely regardless of the input file size, so after all windows are processed
 it is necessary to cancel Flink job manually. The end of the processing can be inferred from the logs.
 
 ## How to run the project
